@@ -1,0 +1,18 @@
+name: Ping IndexNow
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for Cloudflare to finish deploying
+        run: sleep 180
+      - name: Send every sitemap URL to IndexNow
+        run: |
+          URLS=$(grep -o '<loc>[^<]*' public/sitemap.xml | sed 's/<loc>//' | jq -R . | jq -s -c .)
+          curl -s -o /dev/null -w "IndexNow: %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"www.hayesequipment.com\",\"key\":\"c167bca5509acf6b2aac085caadc8770\",\"keyLocation\":\"https://www.hayesequipment.com/c167bca5509acf6b2aac085caadc8770.txt\",\"urlList\":$URLS}"
