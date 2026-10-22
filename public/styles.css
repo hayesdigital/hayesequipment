@@ -110,3 +110,4 @@ section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px s
 }
 .nav .btn{white-space:nowrap}
 @media(max-width:520px){.logo small{display:none}.logo b{font-size:1rem}}
+[id]{scroll-margin-top:80px}
