@@ -85,7 +85,7 @@ def head(title, desc, path, schemas=(), noindex=False):
 <meta property="og:image" content="{SITE}{OG}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="WSK-1 wireless remote start kit support for Honda EU3000is and Yamaha EF3000ise generators">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{SITE}{OG}">
 <meta name="theme-color" content="#232428">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 {FONTS}
 <link rel="stylesheet" href="/styles.css">
@@ -93,7 +93,7 @@ def head(title, desc, path, schemas=(), noindex=False):
 </head>
 <body>
 <header class="site-header"><div class="container">
-  <a class="logo" href="/"><span class="mark">H</span><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
+  <a class="logo" href="/"><img class="mark" src="/hayes-diamond-h.svg" width="36" height="36" alt=""><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
   <nav class="nav" aria-label="Main">
     <a href="/#manuals">Manuals</a>
     <a href="/#troubleshooting">Troubleshooting</a>
@@ -108,7 +108,7 @@ def head(title, desc, path, schemas=(), noindex=False):
 FOOT = f"""<footer class="site-footer"><div class="container">
   <div class="cols">
     <div>
-      <a class="logo" href="/"><span class="mark">H</span><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
+      <a class="logo" href="/"><img class="mark" src="/hayes-diamond-h.svg" width="36" height="36" alt=""><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
       <p style="margin-top:14px;max-width:44ch">Hayes Products, Inc. of Ponca City, Oklahoma, made the WSK-1 wireless remote start kit for Honda and Yamaha generators. Our store is closed, but we still help owners keep their kits running.</p>
     </div>
     <div><ul>
@@ -436,7 +436,7 @@ write("/about/", head(
   {fig("hayesequipment-com-old-website-shopping-cart", 450, 754, "Later version of hayesequipment.com with a shopping cart, Hayes Equipment logo and Hayes Products EU3000is wireless remote start kits", "A later version of hayesequipment.com, shopping cart and all.", "right narrow")}
   <p>The move changed every URL on the site. RV forums, lawn mower forums and all kinds of other websites had links pointing to our specific pages, and overnight those links went nowhere. I didn't know what a 301 redirect was back then, much less how to write an .htaccess file on an Apache server to send every old address to its new home.</p>
   <p>We lost a lot of the ranking power those links had built up. Worse, people started calling and emailing because the links they clicked were dead. Some of them genuinely thought we'd gone out of business.</p>
-  <p>That one stuck with me. I've never caused that problem for a client, and I've fixed it for plenty of businesses since. Later, I went back and added the redirects I didn't know to add twenty years ago. <strong>If an old link brought you to this page, now you know why.</strong></p>
+  <p>That one stuck with me. I've never caused that problem for a client, and I've fixed it for plenty of businesses since. Over the years I went back and redirected a lot of those old links... then lost them all over again when I replaced the site after we closed. With this rebuild, I've put them back for good. <strong>If an old link brought you to this page, now you know why.</strong></p>
 
   <h2>Saying goodbye to Hayes Equipment</h2>
   <p>My dad passed away in 2017. We kept the business going for several more years, and honestly, we probably would have kept going longer if not for COVID. The shutdowns choked off supply. We couldn't get enough new Bad Boy mowers and other equipment to cover the demand we had built, or even enough product to justify keeping the doors open.</p>
@@ -519,6 +519,4 @@ TO_ABOUT = ["/eu1000i.htm", "/eu2000i.htm", "/eu3000is.htm", "/eu6500is.htm", "/
 (ROOT / "site.webmanifest").write_text(json.dumps({"name": "Hayes Equipment WSK-1 Support", "short_name": "Hayes Equipment",
     "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}],
     "theme_color": "#232428", "background_color": "#f6f5f2", "display": "browser"}, indent=2))
-(ROOT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="11" fill="#c8102e"/>'
-    '<text x="32" y="47" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="44" fill="#fff">H</text></svg>')
 print("Built", sorted(str(p.relative_to(ROOT)) for p in ROOT.rglob("*.html")))

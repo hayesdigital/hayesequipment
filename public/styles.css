@@ -24,7 +24,7 @@ p+p{margin-top:12px}
 .site-header{background:var(--char);color:#fff;position:sticky;top:0;z-index:20}
 .site-header .container{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
 .logo{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
-.logo .mark{width:34px;height:34px;border-radius:6px;background:var(--red);display:grid;place-items:center;font-family:"Archivo",sans-serif;font-weight:800;font-size:1.25rem;color:#fff}
+.logo .mark{width:36px;height:36px;display:block;flex:0 0 36px}
 .logo b{font-family:"Archivo",sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:.02em;display:block;line-height:1}
 .logo small{display:block;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#a9adb8;margin-top:3px}
 .nav{display:flex;align-items:center;gap:20px}
