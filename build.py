@@ -192,7 +192,6 @@ home = head(
 <main>
 <section class="hero"><div class="container hero-grid">
   <div>
-    <span class="eyebrow">Hayes Products WSK-1 Support</span>
     <h1>Honda EU3000is and Yamaha EF3000ise Remote Start Kit Support</h1>
     <p class="lead">Still running a WSK-1 remote start kit on your generator? We're glad it's still earning its keep. Our store has closed, but we still help WSK-1 owners with the original manuals, troubleshooting, and replacement parts like key fobs and choke controllers.</p>
     <div class="hero-actions">
@@ -215,7 +214,6 @@ home = head(
 
 <section id="how-to-start"><div class="container two">
   <div>
-    <span class="eyebrow">Using your remote</span>
     <h2>How to start your generator with the WSK-1 remote</h2>
     <p>Before anything else, make sure the generator's battery is installed the way the manufacturer says and fully charged. Leave the ignition key in the OFF position. The key still works normally... you just don't need it (or the choke) when you start with the remote, because the WSK-1 handles the choke for you.</p>
     <ol class="steps" style="margin-top:18px">
@@ -238,7 +236,6 @@ home = head(
 </div></section>
 
 <section class="alt" id="troubleshooting"><div class="container" style="max-width:860px">
-  <span class="eyebrow">Troubleshooting</span>
   <h2>WSK-1 troubleshooting: the two problems we hear about most</h2>
   <p>Nine times out of ten, a WSK-1 that "quit working" is one of these two things. Both are quick fixes you can do in your driveway.</p>
   {fix_html}
@@ -247,7 +244,6 @@ home = head(
 
 <section id="program-key-fob"><div class="container two">
   <div>
-    <span class="eyebrow">Key fob programming</span>
     <h2>How to program a new or replacement WSK-1 key fob</h2>
     <p>Got a new fob, or adding a second one? You'll pair it to the control box using the three small program buttons on the box. Button 1 is the one closest to the antenna. Each pairing takes a few seconds.</p>
     <ol class="steps" style="margin-top:18px">
@@ -270,7 +266,6 @@ home = head(
 </div></section>
 
 <section class="alt" id="replacement-parts"><div class="container">
-  <span class="eyebrow">Replacement parts</span>
   <h2>WSK-1 replacement parts</h2>
   <p style="max-width:62ch">Lost a fob in the yard? Choke controller finally gave up? We still have parts to keep your WSK-1 going. Just tell us what you need and which generator it's on, and we'll get back to you with pricing and shipping.</p>
   <div class="parts">
@@ -297,7 +292,6 @@ home = head(
 
 <section id="contact"><div class="container two">
   <div class="contact-side">
-    <span class="eyebrow">Contact</span>
     <h2>Questions about your WSK-1? Send us a message.</h2>
     <p>Pick what your message is about, tell us which generator you've got, and we'll reply by email. Whether it's a part you need or a generator that's acting up, we're happy to help.</p>
     <ul>
@@ -350,7 +344,6 @@ write("/about/", head(
     "/about/", about_schema, og="/img/hayes-equipment-story-share.jpg", og_alt="The Hayes Equipment Story, with the Hayes Equipment storefront in Ponca City, Oklahoma") + f"""
 <main class="story">
 <section class="story-hero"><div class="container">
-  <span class="eyebrow">Our story</span>
   <h1>The Hayes Equipment Story: How Our Ponca City Family Business Started My Career in Digital Marketing</h1>
   <div class="author-box">
     <img src="/img/todd-hayes-ponca-city-digital-marketing.webp" width="64" height="64" alt="Todd Hayes, owner of Hayes Digital Marketing in Ponca City, Oklahoma">
@@ -370,7 +363,7 @@ write("/about/", head(
   <aside class="timeline" aria-label="Hayes Equipment timeline"><h2>At a glance</h2><ol>{tl}</ol></aside>
 
   <h2>It started with an auctioneer and a Big Chief tablet</h2>
-  {fig("john-b-hayes-auctioneer-ponca-city", 700, 875, "John B. Hayes, Ponca City auctioneer, in a Hayes cap and shirt with a cartoon auctioneer asking Do I hear five and a nickel", "My dad, John B. Hayes (1952 to 2017), doing what he loved.", "right")}
+  {fig("john-b-hayes-auctioneer-ponca-city", 700, 875, "John B. Hayes, Ponca City auctioneer, in a Hayes cap and shirt with a cartoon auctioneer asking Do I hear five and a nickel", "My dad, John B. Hayes (1952 to 2017), doing what he loved.", "right narrow")}
   <p>My dad, John B. Hayes, was an auctioneer. Our family ran auctions out of a big metal building on the north edge of Ponca City, the John B. Hayes auction facility on US 77. If you grew up around here, there's a decent chance you bought something there on a Saturday. My younger brother, Scott, grew up to be a great auctioneer himself.</p>
   {fig("john-b-hayes-real-estate-auction-card-since-1981", 900, 486, "John B. Hayes Real Estate and Auction Inc. card, Putting Buyers and Sellers Together Since 1981, with a cartoon auctioneer asking Do I hear five and a nickel", "The auction company card. Putting buyers and sellers together since 1981.")}
   <p>I got pulled into the marketing side early. By the time I was 14 or 15, I was writing our auction ads by hand on a legal pad. Dad always called it a Big Chief tablet. I'd drop the pages off with Doris, a nice lady who ran a typing service out of her home. When I picked them up, they came back neatly typed. Just plain text, with a line that said "photo here" wherever I'd scribbled it.</p>
@@ -392,7 +385,7 @@ write("/about/", head(
     {fig("hayes-computer-show-and-sale-ad-1997-ponca-city", 760, 1014, "Newspaper ad for a Computer Show and Sale on August 9, 1997 at the John B. Hayes auction facility in Ponca City", "Our August 9, 1997 Computer Show &amp; Sale ad. Complete systems from $149!")}
   </div>
   <p>I hosted computer shows there too. Vendors from Oklahoma City and Wichita, Kansas, along with another computer builder from Ponca City, set up booths right alongside me. It was kind of a kick watching big city dealers drive to Ponca City to sell parts and new PCs. I still have the ad for one of them: a one-day Computer Show &amp; Sale on Saturday, August 9, 1997, co-sponsored with Abernathy's Accessories.</p>
-  {fig("hayes-computer-receipt-1998-k6-233-custom-pc", 760, 1018, "Hayes Computer sales receipt from January 8, 1998 for a custom AMD K6-233 MMX computer", "A Hayes Computer receipt from January 8, 1998. Customer name blurred.", "right")}
+  {fig("hayes-computer-receipt-1998-k6-233-custom-pc", 760, 1018, "Hayes Computer sales receipt from January 8, 1998 for a custom AMD K6-233 MMX computer", "A Hayes Computer receipt from January 8, 1998. Customer name blurred.", "right narrow")}
   <p>What did a custom build look like back then? I found an old receipt from January 1998: an AMD K6-233 MMX, 64 MB of RAM, a 4.3 GB hard drive, a 24x CD-ROM, a 56k modem, 3D sound with speakers and a 15" monitor. $1,447.33 out the door.</p>
   <h3>eBay, PowerSeller status and Todd's Magic Boot Disk</h3>
   {fig("ebay-powerseller-shirt-todd-hayes", 600, 695, "eBay PowerSeller T-shirt sent to Todd Hayes by eBay", "One of the eBay PowerSeller shirts they used to mail me. I still have it.", "right narrow")}
@@ -418,7 +411,7 @@ write("/about/", head(
   <h3>The awards shelf</h3>
   {fig("hayes-equipment-dealer-awards-bad-boy-mowers-honda-guardian", 1200, 900, "Hayes Equipment dealer awards from Bad Boy Mowers, American Honda and Generac Guardian generators", "Two shelves of dealer awards from Bad Boy Mowers, American Honda and Generac Guardian generators.")}
   <p>For a small dealership on the north edge of Ponca City, we collected a lot of hardware. Bad Boy Mowers named us a Platinum Dealer in 2008 and 2010, a Platinum Plus Dealer in 2011 and 2012, and a Gold Dealer in 2014, 2015 and 2016. In 2009, American Honda gave us a plaque for helping Honda and its customers "realize 50 years of American dreams."</p>
-  {fig("hayes-equipment-bad-boy-mowers-gold-dealer-award-2020", 800, 1067, "Bad Boy Mowers Gold Dealer Award 2020 presented to Hayes Equipment, The Great American Comeback", "Bad Boy Mowers Gold Dealer, 2020.", "right")}
+  {fig("hayes-equipment-bad-boy-mowers-gold-dealer-award-2020", 800, 1067, "Bad Boy Mowers Gold Dealer Award 2020 presented to Hayes Equipment, The Great American Comeback", "Bad Boy Mowers Gold Dealer, 2020.", "right narrow")}
   <p>The one that means the most to me might be the last one. In 2020, right in the middle of COVID, Bad Boy named us a Gold Dealer again. The theme that year was "The Great American Comeback." Even with supply drying up, we were still selling mowers... we just couldn't get our hands on enough of them.</p>
 
   <h3>Hayes Products and the WSK-1 remote start kit</h3>
@@ -477,7 +470,6 @@ _ap.write_text(_ap.read_text().replace("__READ_MIN__", str(max(1, round(len(_txt
 # ---------------- THANK YOU ----------------
 write("/thank-you/", head("Thanks for Your Message | Hayes Equipment", "Thanks for contacting Hayes Equipment about your WSK-1 remote start kit.", "/thank-you/", noindex=True) + f"""
 <main class="page"><div class="container">
-  <span class="eyebrow">Message sent</span>
   <h1>Thanks, we got your message.</h1>
   <p class="lead" style="margin-top:14px">We'll read it and reply by email as soon as we can. If you asked about a part, we'll include pricing and shipping in our reply.</p>
   <h2>While you wait</h2>
