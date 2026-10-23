@@ -347,11 +347,11 @@ tl = "".join(f"<li><b>{y}</b><span>{t}</span></li>" for y, t in TIMELINE)
 write("/about/", head(
     "The Hayes Equipment Story: A Ponca City Family Business, Purple Haze BBS, and How I Fell in Love with SEO",
     "How a Ponca City auction family, a dial-up BBS called Purple Haze, Hayes Computer, and the Honda generator pages on hayesequipment.com started Todd Hayes on a lifelong path in website design and SEO.",
-    "/about/", about_schema, og="/img/hayes-equipment-story-share.jpg", og_alt="The Hayes Equipment Story by Todd Hayes, with John B. Hayes and the Worlds Best SysOp trophy") + f"""
+    "/about/", about_schema, og="/img/hayes-equipment-story-share.jpg", og_alt="The Hayes Equipment Story, with the Hayes Equipment storefront in Ponca City, Oklahoma") + f"""
 <main class="story">
 <section class="story-hero"><div class="container">
   <span class="eyebrow">Our story</span>
-  <h1>The Hayes Equipment Story: How a Ponca City Family Business Taught Me to Get Found Online</h1>
+  <h1>The Hayes Equipment Story: How Our Ponca City Family Business Started My Career in SEO</h1>
   <p class="byline">By Todd Hayes &middot; Ponca City, Oklahoma</p>
 </div></section>
 
