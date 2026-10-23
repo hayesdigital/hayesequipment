@@ -98,6 +98,7 @@ def head(title, desc, path, schemas=(), noindex=False):
     <a href="/#troubleshooting">Troubleshooting</a>
     <a href="/#program-key-fob">Program a Fob</a>
     <a href="/#replacement-parts">Parts</a>
+    <a href="/about/">Our Story</a>
     <a class="btn" href="/#contact">Contact Us</a>
   </nav>
 </div></header>
@@ -115,6 +116,7 @@ FOOT = f"""<footer class="site-footer"><div class="container">
       <li><a href="/#troubleshooting">Troubleshooting</a></li>
       <li><a href="/#program-key-fob">Program a Key Fob</a></li>
       <li><a href="/#replacement-parts">Replacement Parts</a></li>
+      <li><a href="/about/">The Hayes Equipment Story</a></li>
       <li><a href="/#contact">Contact Us</a></li>
     </ul></div>
     <div><ul>
@@ -307,6 +309,116 @@ home = head(
 """ + FOOT
 write("/", home)
 
+# ---------------- ABOUT / OUR STORY ----------------
+H = "/img/history/"
+def fig(src, w, h, alt, cap, cls=""):
+    return (f'<figure class="fig {cls}"><img src="{H}{src}.webp" width="{w}" height="{h}" loading="lazy" alt="{alt}">'
+            f'<figcaption>{cap}</figcaption></figure>')
+
+TODD = {"@type": "Person", "@id": SITE + "/about/#todd", "name": "Todd Hayes", "url": "https://toddhayes.com",
+        "jobTitle": "Owner, Hayes Digital Marketing", "alumniOf": {"@type": "CollegeOrUniversity", "name": "Oklahoma State University"},
+        "worksFor": {"@type": "Organization", "name": "Hayes Digital Marketing", "url": "https://toddhayes.com"},
+        "homeLocation": {"@type": "Place", "name": "Ponca City, Oklahoma"},
+        "knowsAbout": ["Search engine optimization", "Website design", "Local SEO", "Google Ads", "Party rental marketing"],
+        "sameAs": ["https://toddhayes.com"]}
+about_schema = [
+    {"@context": "https://schema.org", "@type": "AboutPage", "@id": SITE + "/about/#webpage", "url": SITE + "/about/",
+     "name": "The Hayes Equipment Story", "isPartOf": {"@id": SITE + "/#website"}, "about": {"@id": SITE + "/#org"},
+     "author": TODD, "primaryImageOfPage": SITE + H + "john-b-hayes-auctioneer-ponca-city.webp"},
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
+        {"@type": "ListItem", "position": 2, "name": "The Hayes Equipment Story", "item": SITE + "/about/"}]},
+]
+
+TIMELINE = [
+    ("Early '90s", "Purple Haze BBS goes live from a trailer house with five phone lines"),
+    ("1997", "Hayes Computer hosts computer shows at the John B. Hayes Sale Facility"),
+    ("1999", "Hayes Equipment opens as a weekday retail store with Snapper mowers"),
+    ("2001", "hayesequipment.com goes online, hand-coded and uploaded over FTP"),
+    ("2017", "My dad, John B. Hayes, passes away"),
+    ("2023", "Hayes Equipment and Hayes Products, Inc. retire"),
+    ("Today", "Hayes Digital Marketing helps small businesses get found nationwide"),
+]
+tl = "".join(f"<li><b>{y}</b><span>{t}</span></li>" for y, t in TIMELINE)
+
+write("/about/", head(
+    "The Hayes Equipment Story: A Ponca City Family Business, Purple Haze BBS, and How I Fell in Love with SEO",
+    "How a Ponca City auction family, a dial-up BBS called Purple Haze, Hayes Computer, and the Honda generator pages on hayesequipment.com started Todd Hayes on a lifelong path in website design and SEO.",
+    "/about/", about_schema) + f"""
+<main class="story">
+<section class="story-hero"><div class="container">
+  <span class="eyebrow">Our story</span>
+  <h1>The Hayes Equipment Story: How a Ponca City Family Business Taught Me to Get Found Online</h1>
+  <p class="byline">By Todd Hayes &middot; Ponca City, Oklahoma</p>
+</div></section>
+
+<article class="container story-body">
+  <p class="lead">If an old link brought you here, welcome back. Maybe you were looking for a Honda EU2000i we sold twenty years ago, or a Snapper mower, or a Cookshack smoker. Those pages are gone now. Hayes Equipment closed its doors in the fall of 2023.</p>
+  <p>But I didn't want this site to just go dark. It's where my whole career started... so here's the story.</p>
+
+  <aside class="timeline" aria-label="Hayes Equipment timeline"><h2>At a glance</h2><ol>{tl}</ol></aside>
+
+  <h2>It started with an auctioneer and a Big Chief tablet</h2>
+  {fig("john-b-hayes-auctioneer-ponca-city", 700, 875, "John B. Hayes, Ponca City auctioneer, in a Hayes cap and shirt with a cartoon auctioneer asking Do I hear five and a nickel", "My dad, John B. Hayes (1952 to 2017), doing what he loved.", "right")}
+  <p>My dad, John B. Hayes, was an auctioneer. Our family ran sales out of a big metal building on the north edge of Ponca City, the John B. Hayes Sale Facility on US 77. If you grew up around here, there's a decent chance you bought something there on a Saturday.</p>
+  <p>I got pulled into the marketing side early. By the time I was 14 or 15, I was writing our auction ads by hand on a legal pad. Dad always called it a Big Chief tablet. I'd drop the pages off with Doris, a nice lady who ran a typing service out of her home. When I picked them up, they came back neatly typed. Just plain text, with a line that said "photo here" wherever I'd scribbled it.</p>
+  <p>Then I'd drive those ads over to the Ponca City News and hand them through their drive-up window. We ran ads every week, in the papers and in the local shoppers too, like the Shop and Swap and the Nickel papers. When fax machines came along, the little papers around us in Tonkawa, Newkirk and Shidler got one before the Ponca City News did. So I kept making that drive.</p>
+  <p>Looking back, that was my first marketing job. I just didn't know it yet.</p>
+
+  <h2>Purple Haze BBS: getting found online before most people had the internet</h2>
+  {fig("purple-haze-bbs-worlds-best-sysop-trophy-todd-hayes", 800, 1067, "Worlds Best SysOp trophy engraved for Todd Hayes, given by Purple Haze BBS users", "The &ldquo;Worlds Best SysOp&rdquo; trophy my Purple Haze BBS users gave me at the meetup they organized at Lake Ponca.", "left")}
+  <p>After I got out of Oklahoma State University, I bought a little trailer house and ran five phone lines into it. That's where I started Purple Haze BBS, a dial-up bulletin board system. (Haze with a Z. My name's spelled H-A-Y-E-S. I thought it was funny.)</p>
+  <p>This was back in the DOS and Windows 3.1 days, when a fast modem ran at 14,400 baud. The other local boards were text only. Purple Haze ran on Excalibur BBS software, which made it fully graphical, point and click. The first time you dialed in, you downloaded the Excalibur software to get access, kind of like installing a web browser today. And once you got in, the first thing you heard was a WAV file of Jimi Hendrix's "Purple Haze," turned up loud.</p>
+  <p>Nearly 1,000 people signed up. Most were from Ponca City and the towns around us, but some dialed in from across the country. They played games together, chatted, sent private messages and traded files. I hosted a huge library of shareware and even Linux distributions like Red Hat. It was a social network before anybody called it that.</p>
+  <p>One year the users organized a lunch at the shelter houses at Lake Ponca, just so everybody could meet in person. I didn't plan it. I was just invited. And at that lunch, they surprised me with a trophy engraved "Worlds Best SysOp." I still have it.</p>
+  <p>Purple Haze was one of only two or three BBSs in the area, so I take the "world's best" part with a grin. But it taught me something I still use every day. When people can find you, and they like what they find, they tell their friends.</p>
+
+  <h2>Hayes Computer: custom PCs, computer shows and Y2K phone calls</h2>
+  <p>The BBS turned out to be great marketing for my other business, Hayes Computer. Our slogan was "We custom build to fit your needs." We sold new, used and refurbished systems, plus parts, upgrades and repairs, right out of the family facility at US 77 and John B. Hayes Road.</p>
+  <div class="fig-row">
+    {fig("hayes-computer-business-card-ponca-city", 1000, 579, "Hayes Computer business card, We custom build to fit your needs, Todd Hayes owner, Ponca City OK", "My Hayes Computer business card. The 580 area code dates it to after Oklahoma split from 405 in late 1997.")}
+    {fig("hayes-computer-show-and-sale-ad-1997-ponca-city", 760, 1014, "Newspaper ad for a Computer Show and Sale on August 9, 1997 at the John B. Hayes Sale Facility in Ponca City", "Our August 9, 1997 Computer Show &amp; Sale ad. Complete systems from $149!")}
+  </div>
+  <p>I hosted computer shows there too. Vendors from Oklahoma City and Wichita, Kansas, along with another computer builder from Ponca City, set up booths right alongside me. It was kind of a kick watching big city dealers drive to Ponca City to sell parts and new PCs. I still have the ad for one of them: a one-day Computer Show &amp; Sale on Saturday, August 9, 1997, co-sponsored with Abernathy's Accessories.</p>
+  {fig("hayes-computer-receipt-1998-k6-233-custom-pc", 760, 1018, "Hayes Computer sales receipt from January 8, 1998 for a custom AMD K6-233 MMX computer", "A Hayes Computer receipt from January 8, 1998. Customer name blurred.", "right")}
+  <p>What did a custom build look like back then? I found an old receipt from January 1998: an AMD K6-233 MMX, 64 MB of RAM, a 4.3 GB hard drive, a 24x CD-ROM, a 56k modem, 3D sound with speakers and a 15" monitor. $1,447.33 out the door.</p>
+  <p>Then came Y2K. In late 1999, I took call after call from customers worried their computer might blow up when the clock hit midnight on New Year's Eve. So I'd walk them through it. Set your date to 2000, or 2005, or 2010, and click OK. You could hear the hesitation in their voice. Probably a little wince as they clicked the mouse. And then... nothing. Their computer just kept ticking along like always.</p>
+
+  <h2>Hayes Equipment: lawn mowers on weekdays, auctions on Saturdays</h2>
+  <p>Auctions kept us busiest on weekends, especially Saturdays. Getting ready for a sale was plenty of work during the week too, but with at least three of us there, we had time for something more. So in 1999, we picked up Snapper mowers as our first equipment line, and Hayes Equipment opened as our Monday through Friday retail store.</p>
+  <p>It grew from there. Over the years we sold Scag, Walker, Toro, Snapper, Everride, Dixie Chopper, and finally Bad Boy mowers and Bad Boy implements. We carried LS tractors. We sold Honda and Yamaha generators. We even sold Cookshack smokers, which are built right here in Ponca City. And through Hayes Products, Inc., we made the <a href="/">WSK-1 wireless remote start kit</a> for Honda EU3000is and Yamaha EF3000ise generators.</p>
+
+  <h2>hayesequipment.com and the Honda generator pages that ranked nationwide</h2>
+  <p>I registered hayesequipment.com in January 2001 through Network Solutions and hosted it with a small Texas company called X7 Hosting. I built every page by hand in Microsoft FrontPage Express and uploaded each HTML file, one at a time, over FTP.</p>
+  <p>It worked better than I ever expected. When people searched for a quiet Honda generator, like the EU1000i, EU2000i, EU3000is or later the EU6500is, or a Honda generator for construction or home backup, our little Ponca City dealership showed up at the top of Google. Not just locally. Nationwide.</p>
+  <p>Every time we added a new product line, I built its page the same way, aiming for Google to pick us as a top place to buy. Mowers, tractors, smokers. It kept working. That's when I fell in love with SEO. Figuring out what people were searching for, then building the page that answered it best, never got old.</p>
+
+  <h2>My first big website mistake, and the lesson I never forgot</h2>
+  <p>A few years in, I moved the site from X7 Hosting to GoDaddy so we could have a better shopping cart. The new site looked prettier. It was also my first big mistake in the website business.</p>
+  <p>The move changed every URL on the site. RV forums, lawn mower forums and all kinds of other websites had links pointing to our specific pages, and overnight those links went nowhere. I didn't know what a 301 redirect was back then, much less how to write an .htaccess file on an Apache server to send every old address to its new home.</p>
+  <p>We lost a lot of the ranking power those links had built up. Worse, people started calling and emailing because the links they clicked were dead. Some of them genuinely thought we'd gone out of business.</p>
+  <p>That one stuck with me. I've never caused that problem for a client, and I've fixed it for plenty of businesses since. With this rebuild, I finally went back and added the redirects I didn't know to add twenty years ago. If an old link brought you to this page, now you know why.</p>
+
+  <h2>Saying goodbye to Hayes Equipment</h2>
+  <p>My dad passed away in 2017. We kept the business going for several more years, and honestly, we probably would have kept going longer if not for COVID. The shutdowns choked off supply. We couldn't get enough new Bad Boy mowers and other equipment to cover what we could sell, or even enough sales to keep the doors open.</p>
+  <p>So in the fall of 2023, we retired Hayes Equipment and Hayes Products, Inc. It was the right time to move on to brighter territory. We still support our WSK-1 customers, and this site is still here to do that.</p>
+
+  <h2>Where I am now: Hayes Digital Marketing</h2>
+  <p>After we closed, I went full time with my own agency, <a href="https://toddhayes.com">Hayes Digital Marketing</a>. Since then I've helped small businesses from coast to coast get found: barbershops, a truck flatbed manufacturer with a nationwide dealer network, boutique shops on small-town main streets, and HVAC and plumbing companies.</p>
+  <p>Most of all, I've become known for party rental marketing. I help bounce house, tent, table and chair rental companies from California and Arizona to Kansas City, Idaho and Florida rank high on Google and in AI search, so they get more paid bookings and keep their calendars full.</p>
+  <p>It's the same thing I was doing with a Big Chief tablet at 15, and with Honda generator pages in 2001. Find out what people are looking for, then make sure they find you first.</p>
+  <div class="cta-card">
+    <div><h3>Own a small business that needs to get found?</h3><p>Learn more about me and how I help businesses rank on Google and in AI search.</p></div>
+    <a class="btn" href="https://toddhayes.com">Visit toddhayes.com</a>
+  </div>
+  <div class="cta-card alt">
+    <div><h3>Still running a WSK-1 remote start kit?</h3><p>Grab the manuals, troubleshooting tips and replacement parts.</p></div>
+    <a class="btn ghost" href="/">WSK-1 Support</a>
+  </div>
+</article>
+</main>
+""" + FOOT)
+
 # ---------------- THANK YOU ----------------
 write("/thank-you/", head("Thanks for Your Message | Hayes Equipment", "Thanks for contacting Hayes Equipment about your WSK-1 remote start kit.", "/thank-you/", noindex=True) + f"""
 <main class="page"><div class="container">
@@ -351,7 +463,17 @@ write("/privacy/", head("Privacy Policy | Hayes Equipment", "How Hayes Equipment
 
 # ---------------- misc files ----------------
 (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
-urls = ["/", "/privacy/"] + [f"/docs/{f}" for f, _, _ in DOCS]
+urls = ["/", "/about/", "/privacy/"] + [f"/docs/{f}" for f, _, _ in DOCS]
+
+# 301s for old hayesequipment.com URLs that still have backlinks (from SE Ranking, Oct 2026).
+# WSK-1 / Hayes Products pages go to the support home page; old dealership pages go to the story page.
+TO_HOME = ["/hayes_products.htm", "/portable_generator_wireless_remote_start_kit.htm",
+           "/portable_generator_wireless_remote_start_ki", "/portable_generator_wireless_remote_"]
+TO_ABOUT = ["/eu1000i.htm", "/eu2000i.htm", "/eu3000is.htm", "/eu6500is.htm", "/eb12d.htm", "/ex4500.htm", "/es6500.htm",
+            "/wholesale.htm", "/honda_generator_wattage_guide.htm", "/kipor_generators.htm", "/pl400aerator.htm",
+            "/sahara_mini_250cc_dune_buggy.htm", "/sahara_250cc_dune_buggy_gallery/", "/sahara_250cc_dune_buggy_gallery/index.html",
+            "/p/honda-generators", "/honda/*", "/yamaha_generators/*", "/wholesale/*", "/p/*"]
+(ROOT / "_redirects").write_text("".join(f"{u} / 301\n" for u in TO_HOME) + "".join(f"{u} /about/ 301\n" for u in TO_ABOUT))
 (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     + "".join(f"  <url><loc>{SITE}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
 (ROOT / "site.webmanifest").write_text(json.dumps({"name": "Hayes Equipment WSK-1 Support", "short_name": "Hayes Equipment",
