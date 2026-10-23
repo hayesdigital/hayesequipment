@@ -323,11 +323,11 @@ TODD = {"@type": "Person", "@id": SITE + "/about/#todd", "name": "Todd Hayes", "
         "worksFor": {"@type": "Organization", "name": "Hayes Digital Marketing", "url": "https://toddhayes.com"},
         "homeLocation": {"@type": "Place", "name": "Ponca City, Oklahoma"},
         "knowsAbout": ["Search engine optimization", "Website design", "Local SEO", "Google Ads", "Party rental marketing"],
-        "sameAs": ["https://toddhayes.com"]}
+        "image": SITE + "/img/todd-hayes-ponca-city-digital-marketing.webp", "sameAs": ["https://toddhayes.com"]}
 about_schema = [
     {"@context": "https://schema.org", "@type": "AboutPage", "@id": SITE + "/about/#webpage", "url": SITE + "/about/",
      "name": "The Hayes Equipment Story", "isPartOf": {"@id": SITE + "/#website"}, "about": {"@id": SITE + "/#org"},
-     "author": TODD, "primaryImageOfPage": SITE + H + "john-b-hayes-auctioneer-ponca-city.webp"},
+     "author": TODD, "datePublished": "2026-10-23", "dateModified": "2026-10-23", "primaryImageOfPage": SITE + H + "john-b-hayes-auctioneer-ponca-city.webp"},
     {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": SITE + "/"},
         {"@type": "ListItem", "position": 2, "name": "The Hayes Equipment Story", "item": SITE + "/about/"}]},
@@ -352,7 +352,14 @@ write("/about/", head(
 <section class="story-hero"><div class="container">
   <span class="eyebrow">Our story</span>
   <h1>The Hayes Equipment Story: How Our Ponca City Family Business Started My Career in Digital Marketing</h1>
-  <p class="byline">By Todd Hayes &middot; Ponca City, Oklahoma</p>
+  <div class="author-box">
+    <img src="/img/todd-hayes-ponca-city-digital-marketing.webp" width="64" height="64" alt="Todd Hayes, owner of Hayes Digital Marketing in Ponca City, Oklahoma">
+    <div class="who">
+      <a href="https://toddhayes.com" rel="author">Todd Hayes</a>
+      <span>Owner, <a href="https://toddhayes.com">Hayes Digital Marketing</a> &middot; Ponca City, Oklahoma</span>
+    </div>
+    <div class="meta"><time datetime="2026-10-23">Published Oct 23, 2026</time><span>__READ_MIN__ min read</span></div>
+  </div>
 </div></section>
 
 <article class="container story-body">
@@ -460,6 +467,11 @@ write("/about/", head(
 </article>
 </main>
 """ + FOOT)
+
+import re as _re
+_ap = ROOT / "about" / "index.html"
+_txt = _re.sub(r"<[^>]+>", " ", _re.search(r"<article.*?</article>", _ap.read_text(), _re.S).group(0))
+_ap.write_text(_ap.read_text().replace("__READ_MIN__", str(max(1, round(len(_txt.split()) / 230)))))
 
 # ---------------- THANK YOU ----------------
 write("/thank-you/", head("Thanks for Your Message | Hayes Equipment", "Thanks for contacting Hayes Equipment about your WSK-1 remote start kit.", "/thank-you/", noindex=True) + f"""
