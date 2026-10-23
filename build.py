@@ -69,7 +69,9 @@ WEBSITE = {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "
 
 OG = "/img/wsk-1-remote-start-kit-support-share.jpg"
 
-def head(title, desc, path, schemas=(), noindex=False):
+def head(title, desc, path, schemas=(), noindex=False, og=None, og_alt=None):
+    OGI = og or OG
+    OGA = og_alt or "WSK-1 wireless remote start kit support for Honda EU3000is and Yamaha EF3000ise generators"
     ld = "".join(f'<script type="application/ld+json">{json.dumps(s, separators=(",", ":"))}</script>' for s in [ORG, *schemas])
     robots = '<meta name="robots" content="noindex">\n' if noindex else ""
     return f"""<!doctype html>
@@ -82,8 +84,8 @@ def head(title, desc, path, schemas=(), noindex=False):
 {robots}<link rel="canonical" href="{SITE}{path}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Hayes Equipment"><meta property="og:locale" content="en_US">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{SITE}{path}">
-<meta property="og:image" content="{SITE}{OG}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="WSK-1 wireless remote start kit support for Honda EU3000is and Yamaha EF3000ise generators">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{SITE}{OG}">
+<meta property="og:image" content="{SITE}{OGI}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{OGA}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{SITE}{OGI}">
 <meta name="theme-color" content="#232428">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
@@ -345,7 +347,7 @@ tl = "".join(f"<li><b>{y}</b><span>{t}</span></li>" for y, t in TIMELINE)
 write("/about/", head(
     "The Hayes Equipment Story: A Ponca City Family Business, Purple Haze BBS, and How I Fell in Love with SEO",
     "How a Ponca City auction family, a dial-up BBS called Purple Haze, Hayes Computer, and the Honda generator pages on hayesequipment.com started Todd Hayes on a lifelong path in website design and SEO.",
-    "/about/", about_schema) + f"""
+    "/about/", about_schema, og="/img/hayes-equipment-story-share.jpg", og_alt="The Hayes Equipment Story by Todd Hayes, with John B. Hayes and the Worlds Best SysOp trophy") + f"""
 <main class="story">
 <section class="story-hero"><div class="container">
   <span class="eyebrow">Our story</span>
