@@ -219,11 +219,11 @@ home = head(
     <ol class="steps" style="margin-top:18px">
       <li>Turn the toggle switch on the generator's control panel to <b>ON</b>.</li>
       <li>Press the red <b>ON/OFF</b> button on the fob.</li>
-      <li>Press the <b>ARM/DISARM</b> button (gray on Honda kits, white on Yamaha kits).</li>
+      <li>Press the <b>ARM</b> button, also called Arm/Disarm (gray on Honda kits, white on Yamaha kits).</li>
       <li>Press the blue <b>START</b> button. The engine turns over and the generator starts.</li>
-      <li>Didn't catch the first time? Press ARM/DISARM again, then START.</li>
+      <li>Didn't catch the first time? Press ARM again, then START.</li>
     </ol>
-    <p class="note">The AUX 1 button isn't used on the WSK-1.</p>
+    <p class="note">The AUX button isn't used on the WSK-1.</p>
   </div>
   <div class="card">
     <h3>Stopping the generator</h3>
@@ -231,7 +231,7 @@ home = head(
       <li>Press the red <b>ON/OFF</b> button on the fob. The generator shuts down.</li>
       <li>Turn the control panel toggle switch to <b>OFF</b> if you're storing the generator or won't use the remote for a while. That keeps the kit from slowly draining your battery.</li>
     </ol>
-    <img src="/img/wsk-1-replacement-remote-key-fob.webp" width="362" height="416" loading="lazy" alt="WSK-1 remote key fob with ON/OFF, START, ARM/DISARM and AUX 1 buttons" style="max-width:220px;margin:20px auto 0;border-radius:8px">
+    <img src="/img/wsk-1-replacement-remote-key-fob.webp" width="712" height="770" loading="lazy" alt="WSK-1 remote key fob with ON/OFF, START, ARM and AUX buttons" style="max-width:220px;margin:20px auto 0;border-radius:8px">
   </div>
 </div></section>
 
@@ -256,7 +256,7 @@ home = head(
       <li>While it's flashing, press <b>START</b> on the fob. The LED stays lit for a moment, then flashes.</li>
       <li>Press button <b>2</b> once. The blue light goes out.</li>
       <li>Press and hold program button <b>3</b> until the LED lights up and flashes.</li>
-      <li>While it's flashing, press <b>ARM/DISARM</b> on the fob. The LED stays lit for a moment, then flashes.</li>
+      <li>While it's flashing, press <b>ARM</b> on the fob. The LED stays lit for a moment, then flashes.</li>
       <li>Press button <b>3</b> once. The blue light goes out. That's it, your new fob is paired.</li>
     </ol>
   </div>
@@ -273,13 +273,13 @@ home = head(
   <p style="max-width:62ch">Lost a fob in the yard? Choke controller finally gave up? We still have parts to keep your WSK-1 going. Just tell us what you need and which generator it's on, and we'll get back to you with pricing and shipping.</p>
   <div class="parts">
     <div class="part">
-      <img src="/img/wsk-1-replacement-remote-key-fob.webp" width="362" height="416" loading="lazy" alt="Replacement WSK-1 wireless remote key fob for Honda and Yamaha generator remote start kits">
+      <img src="/img/wsk-1-replacement-remote-key-fob-card.webp" width="800" height="600" loading="lazy" alt="Replacement WSK-1 wireless remote key fob for Honda and Yamaha generator remote start kits">
       <h3>Replacement remote key fob</h3>
       <p>A new or spare fob for your WSK-1. Pairs to your existing control box in a couple of minutes using the steps above.</p>
       <a class="btn" href="#contact" data-topic="Replacement remote key fob">Ask About a Key Fob</a>
     </div>
     <div class="part">
-      <div class="ph">WSK-1 Choke Controller</div>
+      <img src="/img/wsk-1-replacement-choke-controller-actuator.webp" width="800" height="600" loading="lazy" alt="Replacement WSK-1 choke controller actuator with blue and green wire leads for Honda EU3000is and Yamaha EF3000ise remote start kits">
       <h3>Replacement choke controller</h3>
       <p>The actuator and cable that work the choke automatically when you start with the remote. Fits the Honda EU3000is and Yamaha EF3000ise kits.</p>
       <a class="btn" href="#contact" data-topic="Replacement choke controller">Ask About a Choke Controller</a>
