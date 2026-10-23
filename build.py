@@ -286,7 +286,7 @@ home = head(
     <div class="part">
       <img src="/img/wsk-1-control-box-mounted-honda-eu3000is-door.webp" width="640" height="480" loading="lazy" alt="WSK-1 control box mounted inside the side door of a Honda EU3000is generator">
       <h3>Other WSK-1 parts</h3>
-      <p>Need something else, like a harness, toggle switch, or control box? Ask us. If we've got it, we'll let you know.</p>
+      <p>Need something else, like a harness or toggle switch? Ask us. New controllers are no longer made, but if we've got the part on the shelf, we'll let you know.</p>
       <a class="btn" href="#contact" data-topic="Other replacement part">Ask About Another Part</a>
     </div>
   </div>
@@ -331,7 +331,7 @@ about_schema = [
 ]
 
 TIMELINE = [
-    ("Early '90s", "Purple Haze BBS goes live from a trailer house with five phone lines"),
+    ("1994", "Purple Haze BBS goes live from a trailer house with five phone lines"),
     ("1997", "Hayes Computer hosts computer shows at the John B. Hayes Sale Facility"),
     ("1999", "Hayes Equipment opens as a weekday retail store with Snapper mowers"),
     ("2001", "hayesequipment.com goes online, hand-coded and uploaded over FTP"),
@@ -367,9 +367,9 @@ write("/about/", head(
 
   <h2>Purple Haze BBS: getting found online before most people had the internet</h2>
   {fig("purple-haze-bbs-worlds-best-sysop-trophy-todd-hayes", 800, 1067, "Worlds Best SysOp trophy engraved for Todd Hayes, given by Purple Haze BBS users", "The &ldquo;Worlds Best SysOp&rdquo; trophy my Purple Haze BBS users gave me at the meetup they organized at Lake Ponca.", "left")}
-  <p>After I got out of Oklahoma State University, I bought a little trailer house and ran five phone lines into it. That's where I started Purple Haze BBS, a dial-up bulletin board system. (Haze with a Z. My name's spelled H-A-Y-E-S. I thought it was funny.)</p>
-  <p>This was back in the DOS and Windows 3.1 days, when a fast modem ran at 14,400 baud. The other local boards were text only. Purple Haze ran on Excalibur BBS software, which made it fully graphical, point and click. The first time you dialed in, you downloaded the Excalibur software to get access, kind of like installing a web browser today. And once you got in, the first thing you heard was a WAV file of Jimi Hendrix's "Purple Haze," turned up loud.</p>
-  <p>Nearly 1,000 people signed up. Most were from Ponca City and the towns around us, but some dialed in from across the country. They played games together, chatted, sent private messages and traded files. I hosted a huge library of shareware and even Linux distributions like Red Hat. It was a social network before anybody called it that.</p>
+  <p>After I got out of Oklahoma State University, I bought a little trailer house and ran five phone lines into it. That's where I started Purple Haze BBS, a dial-up bulletin board system, in 1994. (Haze with a Z. My name's spelled H-A-Y-E-S. I thought it was funny.)</p>
+  <p>This was back in the DOS and Windows 3.1 days, when a fast modem ran at 14,400 baud. The other local boards were text only. Purple Haze ran on Excalibur BBS software, which had only come out the year before, and it made the whole board fully graphical, point and click. The first time you dialed in, you downloaded the Excalibur software to get access, kind of like installing a web browser today. And once you got in, the first thing you heard was a WAV file of Jimi Hendrix's "Purple Haze," turned up loud.</p>
+  <p>Nearly 1,000 people signed up. Most were from Ponca City and the towns around us, but some dialed in from across the country. They played games together, chatted, sent private messages and traded files. I hosted a huge library of shareware and even Linux distributions like Red Hat. It was a social network before anybody called it that. We even had Purple Haze T-shirts made, with a Nagel girl on the front. I'm pretty sure I still have one around here somewhere.</p>
   <p>One year the users organized a lunch at the shelter houses at Lake Ponca, just so everybody could meet in person. I didn't plan it. I was just invited. And at that lunch, they surprised me with a trophy engraved "Worlds Best SysOp." I still have it.</p>
   <p>Purple Haze was one of only two or three BBSs in the area, so I take the "world's best" part with a grin. But it taught me something I still use every day. When people can find you, and they like what they find, they tell their friends.</p>
 
@@ -386,7 +386,11 @@ write("/about/", head(
 
   <h2>Hayes Equipment: lawn mowers on weekdays, auctions on Saturdays</h2>
   <p>Auctions kept us busiest on weekends, especially Saturdays. Getting ready for a sale was plenty of work during the week too, but with at least three of us there, we had time for something more. So in 1999, we picked up Snapper mowers as our first equipment line, and Hayes Equipment opened as our Monday through Friday retail store.</p>
-  <p>It grew from there. Over the years we sold Scag, Walker, Toro, Snapper, Everride, Dixie Chopper, and finally Bad Boy mowers and Bad Boy implements. We carried LS tractors. We sold Honda and Yamaha generators. We even sold Cookshack smokers, which are built right here in Ponca City. And through Hayes Products, Inc., we made the <a href="/">WSK-1 wireless remote start kit</a> for Honda EU3000is and Yamaha EF3000ise generators.</p>
+  <p>It grew from there. Over the years we sold Scag, Walker, Toro, Snapper, Everride, Dixie Chopper, and finally Bad Boy mowers and Bad Boy implements. We carried LS tractors and Twister mini dune buggies. We even sold Cookshack smokers, which are built right here in Ponca City.</p>
+  <p>Generators became a big part of who we were. Honda was always our anchor. We also sold Yamaha, plenty of MorPower portables, and some Winco, which were good generators even if they never sold in big numbers for us. For a couple of years we sold a lot of Kipor super quiet generators, until we started seeing quality issues we never had with Honda, so we stopped carrying them. And we sold Generac home standby generators, enough to earn a Generac Top Dealer award that's still around here somewhere.</p>
+
+  <h3>Hayes Products and the WSK-1 remote start kit</h3>
+  <p>Selling all those generators gave us an idea. Under the Hayes Products, Inc. name, we designed the <a href="/">WSK-1 wireless remote start kit</a> for the Honda EU3000is and Yamaha EF3000ise generators. We built the remotes ourselves from component parts. Then we had an overseas company produce the controllers, the "brain box" that tells the generator to start, stop and work the choke. Customers bought them from all over the world.</p>
 
   <h2>hayesequipment.com and the Honda generator pages that ranked nationwide</h2>
   <p>I registered hayesequipment.com in January 2001 through Network Solutions and hosted it with a small Texas company called X7 Hosting. I built every page by hand in Microsoft FrontPage Express and uploaded each HTML file, one at a time, over FTP.</p>
@@ -401,6 +405,7 @@ write("/about/", head(
 
   <h2>Saying goodbye to Hayes Equipment</h2>
   <p>My dad passed away in 2017. We kept the business going for several more years, and honestly, we probably would have kept going longer if not for COVID. The shutdowns choked off supply. We couldn't get enough new Bad Boy mowers and other equipment to cover what we could sell, or even enough sales to keep the doors open.</p>
+  <p>COVID hit Hayes Products too. The overseas company that built our WSK-1 controllers went out of business. Building them in-house would have cost too much, and we couldn't find another manufacturer who could make them at a reasonable price. So we stopped producing the kits.</p>
   <p>So in the fall of 2023, we retired Hayes Equipment and Hayes Products, Inc. It was the right time to move on to brighter territory. We still support our WSK-1 customers, and this site is still here to do that.</p>
 
   <h2>Where I am now: Hayes Digital Marketing</h2>
