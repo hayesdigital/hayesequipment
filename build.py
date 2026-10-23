@@ -79,6 +79,7 @@ def head(title, desc, path, schemas=(), noindex=False, og=None, og_alt=None):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
 <title>{title}</title>
 <meta name="description" content="{desc}">
 {robots}<link rel="canonical" href="{SITE}{path}">
@@ -98,6 +99,7 @@ def head(title, desc, path, schemas=(), noindex=False, og=None, og_alt=None):
   <a class="logo" href="/"><img class="mark" src="/hayes-diamond-h.svg" width="36" height="36" alt=""><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
   <div class="nav-wrap">
   <a class="btn nav-cta-m" href="/#contact">Contact Us</a>
+  <a class="menu-nojs" href="#footer-nav" aria-label="Menu: jump to site links"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></a>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
     <svg class="i-open" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
     <svg class="i-close" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
@@ -120,7 +122,7 @@ FOOT = f"""<footer class="site-footer"><div class="container">
       <a class="logo" href="/"><img class="mark" src="/hayes-diamond-h.svg" width="36" height="36" alt=""><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
       <p style="margin-top:14px;max-width:44ch">Hayes Products, Inc. of Ponca City, Oklahoma, made the WSK-1 wireless remote start kit for Honda and Yamaha generators. Our store is closed, but we still help owners keep their kits running.</p>
     </div>
-    <div><ul>
+    <nav aria-label="Footer"><ul id="footer-nav">
       <li><a href="/#manuals">Download Manuals</a></li>
       <li><a href="/#how-to-start">How to Use the Remote</a></li>
       <li><a href="/#troubleshooting">Troubleshooting</a></li>
@@ -128,7 +130,7 @@ FOOT = f"""<footer class="site-footer"><div class="container">
       <li><a href="/#replacement-parts">Replacement Parts</a></li>
       <li><a href="/about/">The Hayes Equipment Story</a></li>
       <li><a href="/#contact">Contact Us</a></li>
-    </ul></div>
+    </ul></nav>
     <div><ul>
       <li><a href="tel:{PHONE_TEL}">{PHONE}</a></li>
       <li>1417 John B Hayes Rd<br>Ponca City, OK 74601</li>
@@ -139,12 +141,17 @@ FOOT = f"""<footer class="site-footer"><div class="container">
 </div></footer>
 <script>
 (function(){{
-  var mb=document.querySelector(".menu-btn"), hdr=document.querySelector(".site-header");
-  function setMenu(open){{ hdr.classList.toggle("menu-open",open); mb.setAttribute("aria-expanded",open); mb.setAttribute("aria-label",open?"Close menu":"Open menu"); }}
+  var mb=document.querySelector(".menu-btn"), hdr=document.querySelector(".site-header"), openY=0;
+  function isOpen(){{ return hdr.classList.contains("menu-open"); }}
+  function setMenu(open){{ hdr.classList.toggle("menu-open",open); mb.setAttribute("aria-expanded",open); mb.setAttribute("aria-label",open?"Close menu":"Open menu"); if(open) openY=window.scrollY; }}
   if(mb){{
-    mb.addEventListener("click",function(){{ setMenu(!hdr.classList.contains("menu-open")); }});
+    mb.addEventListener("click",function(){{ setMenu(!isOpen()); }});
     document.querySelectorAll("#main-nav a").forEach(function(a){{ a.addEventListener("click",function(){{ setMenu(false); }}); }});
-    document.addEventListener("keydown",function(e){{ if(e.key==="Escape" && hdr.classList.contains("menu-open")){{ setMenu(false); mb.focus(); }} }});
+    document.addEventListener("keydown",function(e){{ if(e.key==="Escape" && isOpen()){{ setMenu(false); mb.focus(); }} }});
+    document.addEventListener("click",function(e){{ if(isOpen() && !hdr.contains(e.target)) setMenu(false); }});
+    window.addEventListener("scroll",function(){{ if(isOpen() && Math.abs(window.scrollY-openY)>40) setMenu(false); }},{{passive:true}});
+    hdr.addEventListener("focusout",function(e){{ if(isOpen() && e.relatedTarget && !hdr.contains(e.relatedTarget)) setMenu(false); }});
+    window.addEventListener("resize",function(){{ if(isOpen() && window.innerWidth>960) setMenu(false); }});
   }}
 }})();
 (function(){{
@@ -189,6 +196,7 @@ def contact_form():
 </div>"""
 
 def write(path, html):
+    if path == "/about/": html = html.replace('<a href="/about/">Our Story</a>', '<a href="/about/" aria-current="page">Our Story</a>', 1)
     out = ROOT / path.strip("/") / "index.html" if path != "/" else ROOT / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
