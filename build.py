@@ -333,7 +333,7 @@ about_schema = [
 
 TIMELINE = [
     ("1994", "Purple Haze BBS goes live from a trailer house with five phone lines"),
-    ("1997", "Hayes Computer hosts computer shows at the John B. Hayes Sale Facility"),
+    ("1997", "Hayes Computer hosts computer shows at the family auction facility"),
     ("1999", "Hayes Equipment opens as a weekday retail store with Snapper mowers"),
     ("2001", "hayesequipment.com goes online, hand-coded and uploaded over FTP"),
     ("2017", "My dad, John B. Hayes, passes away"),
