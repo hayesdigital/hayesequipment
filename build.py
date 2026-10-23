@@ -63,6 +63,7 @@ ORG = {
     "address": {"@type": "PostalAddress", "streetAddress": "1417 John B Hayes Rd", "addressLocality": "Ponca City",
                 "addressRegion": "OK", "postalCode": "74601", "addressCountry": "US"},
     "sameAs": [FACEBOOK],
+    "award": ["Guardian Exemplary Sales Achievement Award (2003)", "American Honda 50 Years in America dealer recognition (2009)", "Bad Boy Mowers Platinum Dealer (2008, 2010)", "Bad Boy Mowers Platinum Plus Dealer (2011, 2012)", "Bad Boy Mowers Gold Dealer (2014, 2015, 2016, 2020)"],
 }
 WEBSITE = {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "/#website", "name": "Hayes Equipment", "url": SITE + "/", "publisher": {"@id": SITE + "/#org"}}
 
@@ -387,7 +388,13 @@ write("/about/", head(
   <h2>Hayes Equipment: lawn mowers on weekdays, auctions on Saturdays</h2>
   <p>Auctions kept us busiest on weekends, especially Saturdays. Getting ready for a sale was plenty of work during the week too, but with at least three of us there, we had time for something more. So in 1999, we picked up Snapper mowers as our first equipment line, and Hayes Equipment opened as our Monday through Friday retail store.</p>
   <p>It grew from there. Over the years we sold Scag, Walker, Toro, Snapper, Everride, Dixie Chopper, and finally Bad Boy mowers and Bad Boy implements. We carried LS tractors and Twister mini dune buggies. We even sold Cookshack smokers, which are built right here in Ponca City.</p>
-  <p>Generators became a big part of who we were. Honda was always our anchor. We also sold Yamaha, plenty of MorPower portables, and some Winco, which were good generators even if they never sold in big numbers for us. For a couple of years we sold a lot of Kipor super quiet generators, until we started seeing quality issues we never had with Honda, so we stopped carrying them. And we sold Generac home standby generators, enough to earn a Generac Top Dealer award that's still around here somewhere.</p>
+  <p>Generators became a big part of who we were. Honda was always our anchor. We also sold Yamaha, plenty of MorPower portables, and some Winco, which were good generators even if they never sold in big numbers for us. For a couple of years we sold a lot of Kipor super quiet generators, until we started seeing quality issues we never had with Honda, so we stopped carrying them. And we sold home standby generators, enough to earn a 2003 Exemplary Sales Achievement Award for Guardian automatic home standby systems.</p>
+
+  <h3>The awards shelf</h3>
+  {fig("hayes-equipment-dealer-awards-bad-boy-mowers-honda-guardian", 1200, 900, "Hayes Equipment dealer awards from Bad Boy Mowers, American Honda and Guardian home standby generators", "Two shelves of dealer awards from Bad Boy Mowers, American Honda and Guardian.")}
+  <p>For a small dealership on the north edge of Ponca City, we collected a lot of hardware. Bad Boy Mowers named us a Platinum Dealer in 2008 and 2010, a Platinum Plus Dealer in 2011 and 2012, and a Gold Dealer in 2014, 2015 and 2016. In 2009, American Honda gave us a plaque for helping Honda and its customers "realize 50 years of American dreams."</p>
+  {fig("hayes-equipment-bad-boy-mowers-gold-dealer-award-2020", 800, 1067, "Bad Boy Mowers Gold Dealer Award 2020 presented to Hayes Equipment, The Great American Comeback", "Bad Boy Mowers Gold Dealer, 2020.", "right")}
+  <p>The one that means the most to me might be the last one. In 2020, right in the middle of COVID, Bad Boy named us a Gold Dealer again. The theme that year was "The Great American Comeback." Even with supply drying up, we were still selling mowers... we just couldn't get our hands on enough of them.</p>
 
   <h3>Hayes Products and the WSK-1 remote start kit</h3>
   <p>Selling all those generators gave us an idea. Under the Hayes Products, Inc. name, we designed the <a href="/">WSK-1 wireless remote start kit</a> for the Honda EU3000is and Yamaha EF3000ise generators. We built the remotes ourselves from component parts. Then we had an overseas company produce the controllers, the "brain box" that tells the generator to start, stop and work the choke. Customers bought them from all over the world.</p>
