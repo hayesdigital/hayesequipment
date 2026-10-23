@@ -407,6 +407,17 @@ write("/about/", head(
   <h3>Hayes Products and the WSK-1 remote start kit</h3>
   <p>Selling all those generators gave us an idea. Under the Hayes Products, Inc. name, we designed the <a href="/">WSK-1 wireless remote start kit</a> for the Honda EU3000is and Yamaha EF3000ise generators. We built the remotes ourselves from component parts. Then we had an overseas company produce the controllers, the "brain box" that tells the generator to start, stop and work the choke. Customers bought them from all over the world.</p>
 
+  <h3>Getting the word out</h3>
+  <p>All those years writing auction ads never really left me. We put the Hayes name everywhere we could: a billboard that said "Mow With an Attitude," booths at home and garden shows with a giant inflatable Bad Boy bulldog, our trailer, Snapper rain gauges people stuck in their yards, and a Hayes Equipment decal on just about every mower and generator that left the lot.</p>
+  <div class="gallery">
+    {fig("hayes-equipment-billboard-bad-boy-honda-mow-with-an-attitude", 800, 600, "Hayes Equipment billboard for Bad Boy Mowers and Honda Power Equipment, Mow With an Attitude, 580-762-6334", "Our Bad Boy and Honda billboard.")}
+    {fig("hayes-equipment-trade-show-booth-bad-boy-bulldog-inflatable", 800, 600, "Hayes Equipment trade show booth with a giant inflatable Bad Boy bulldog and banner", "Show booth, with the bulldog doing the heavy lifting.")}
+    {fig("hayes-equipment-snapper-rain-gauge-giveaway", 800, 600, "Hayes Equipment Ponca City Snapper rain gauge giveaway with phone number 580-762-6334", "A Snapper rain gauge giveaway from the early days.")}
+    {fig("hayes-equipment-dealer-decal-honda-eu3000is-generator", 800, 600, "Hayes Equipment dealer decal on a Honda EU3000is inverter generator", "Every unit left with our decal on it.")}
+    {fig("hayes-equipment-trailer-bad-boy-mz-magnum-mowers", 800, 600, "Hayes Equipment trailer and Bad Boy MZ Magnum mowers in front of the John B. Hayes Real Estate and Auction building", "Our trailer, parked in front of the auction building.")}
+    {fig("bad-boy-mowers-semi-delivery-hayes-equipment-trailer", 800, 600, "Bad Boy Mowers semi truck delivering mowers to Hayes Equipment in Ponca City", "Bad Boy's truck pulling in with another load.")}
+  </div>
+
   <h2>hayesequipment.com and the Honda generator pages that ranked nationwide</h2>
   <p>I registered hayesequipment.com in January 2001 through Network Solutions and hosted it with a small Texas company called X7 Hosting. I built every page by hand in Microsoft FrontPage Express and uploaded each HTML file, one at a time, over FTP.</p>
   <p>It worked better than I ever expected. When people searched for a quiet Honda generator, like the EU1000i, EU2000i, EU3000is or later the EU6500is, or a Honda generator for construction or home backup, our little Ponca City dealership showed up at the top of Google. Not just locally. Nationwide.</p>
@@ -414,6 +425,7 @@ write("/about/", head(
 
   <h2>My first big website mistake, and the lesson I never forgot</h2>
   <p>A few years in, I moved the site from X7 Hosting to GoDaddy so we could have a better shopping cart. The new site looked prettier. It was also my first big mistake in the website business.</p>
+  {fig("hayesequipment-com-old-website-shopping-cart", 450, 754, "Later version of hayesequipment.com with a shopping cart, Hayes Equipment logo and Hayes Products EU3000is wireless remote start kits", "A later version of hayesequipment.com, shopping cart and all.", "right narrow")}
   <p>The move changed every URL on the site. RV forums, lawn mower forums and all kinds of other websites had links pointing to our specific pages, and overnight those links went nowhere. I didn't know what a 301 redirect was back then, much less how to write an .htaccess file on an Apache server to send every old address to its new home.</p>
   <p>We lost a lot of the ranking power those links had built up. Worse, people started calling and emailing because the links they clicked were dead. Some of them genuinely thought we'd gone out of business.</p>
   <p>That one stuck with me. I've never caused that problem for a client, and I've fixed it for plenty of businesses since. With this rebuild, I finally went back and added the redirects I didn't know to add twenty years ago. If an old link brought you to this page, now you know why.</p>
