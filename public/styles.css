@@ -31,7 +31,7 @@ p+p{margin-top:12px}
 .nav a{color:#d9dce3;text-decoration:none;font-weight:600;font-size:.95rem}
 .nav a:hover{color:#fff}
 .nav .btn{padding:9px 15px;font-size:.93rem;color:#fff}
-@media(max-width:820px){.nav a:not(.btn){display:none}}
+
 
 /* hero */
 .hero{background:radial-gradient(900px 420px at 90% -20%,rgba(200,16,46,.32),transparent 60%),var(--char);color:#fff;padding:52px 0 60px}
@@ -174,3 +174,21 @@ a:hover{text-decoration-thickness:2px}
 input,select,textarea{accent-color:var(--red)}
 .hero h1{margin-top:0}
 .story-hero h1{margin-top:0}
+
+/* mobile menu */
+.nav-wrap{display:flex;align-items:center;gap:10px}
+.menu-btn,.nav-cta-m{display:none}
+.menu-btn{background:transparent;border:1px solid rgba(255,255,255,.28);color:#fff;border-radius:10px;width:44px;height:44px;padding:0;cursor:pointer;place-items:center}
+.menu-btn:hover{border-color:#fff}
+.menu-btn .i-close{display:none}
+.menu-open .menu-btn .i-open{display:none}
+.menu-open .menu-btn .i-close{display:block}
+@media(max-width:860px){
+  .menu-btn{display:grid}
+  .nav-cta-m{display:inline-block;padding:9px 14px;font-size:.93rem;white-space:nowrap}
+  .nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--char);flex-direction:column;align-items:stretch;gap:0;padding:6px 20px 18px;border-top:1px solid rgba(255,255,255,.1);box-shadow:0 18px 30px rgba(0,0,0,.35)}
+  .menu-open .nav{display:flex}
+  .nav a{padding:14px 2px;font-size:1.05rem;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav a.btn{display:none}
+}
+@media(max-width:400px){.logo small{display:none}.nav-cta-m{padding:9px 11px}}

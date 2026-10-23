@@ -20,7 +20,13 @@
 <body>
 <header class="site-header"><div class="container">
   <a class="logo" href="/"><img class="mark" src="/hayes-diamond-h.svg" width="36" height="36" alt=""><span><b>HAYES EQUIPMENT</b><small>WSK-1 Remote Start Support</small></span></a>
-  <nav class="nav" aria-label="Main">
+  <div class="nav-wrap">
+  <a class="btn nav-cta-m" href="/#contact">Contact Us</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+    <svg class="i-open" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    <svg class="i-close" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+  </button>
+  <nav class="nav" id="main-nav" aria-label="Main">
     <a href="/#manuals">Manuals</a>
     <a href="/#troubleshooting">Troubleshooting</a>
     <a href="/#program-key-fob">Program a Fob</a>
@@ -28,6 +34,7 @@
     <a href="/about/">Our Story</a>
     <a class="btn" href="/#contact">Contact Us</a>
   </nav>
+  </div>
 </div></header>
 
 <main class="story">
@@ -172,6 +179,15 @@
   <div class="bottom">&copy; 2026 Hayes Equipment. Hayes Products and WSK-1 are trademarks of Hayes Products, Inc. Honda and Yamaha are trademarks of their respective owners. &middot; <a href="/privacy/">Privacy Policy</a></div>
 </div></footer>
 <script>
+(function(){
+  var mb=document.querySelector(".menu-btn"), hdr=document.querySelector(".site-header");
+  function setMenu(open){ hdr.classList.toggle("menu-open",open); mb.setAttribute("aria-expanded",open); mb.setAttribute("aria-label",open?"Close menu":"Open menu"); }
+  if(mb){
+    mb.addEventListener("click",function(){ setMenu(!hdr.classList.contains("menu-open")); });
+    document.querySelectorAll("#main-nav a").forEach(function(a){ a.addEventListener("click",function(){ setMenu(false); }); });
+    document.addEventListener("keydown",function(e){ if(e.key==="Escape" && hdr.classList.contains("menu-open")){ setMenu(false); mb.focus(); } });
+  }
+})();
 (function(){
   var sel=document.getElementById("f-topic"), subj=document.getElementById("f-subject");
   function setSubj(){ if(sel&&subj) subj.value="Hayes Equipment website: "+sel.value; }
