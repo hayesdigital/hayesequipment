@@ -388,6 +388,14 @@ write("/about/", head(
   <h2>Hayes Equipment: lawn mowers on weekdays, auctions on Saturdays</h2>
   <p>Auctions kept us busiest on weekends, especially Saturdays. Getting ready for a sale was plenty of work during the week too, but with at least three of us there, we had time for something more. So in 1999, we picked up Snapper mowers as our first equipment line, and Hayes Equipment opened as our Monday through Friday retail store.</p>
   <p>It grew from there. Over the years we sold Scag, Walker, Toro, Snapper, Everride, Dixie Chopper, and finally Bad Boy mowers and Bad Boy implements. We carried LS tractors and Twister mini dune buggies. We even sold Cookshack smokers, which are built right here in Ponca City.</p>
+  <div class="gallery">
+    {fig("hayes-equipment-storefront-ponca-city-bad-boy-outlaw", 800, 600, "Hayes Equipment storefront with red HAYES sign, company truck and a Bad Boy Outlaw zero turn mower", "The Hayes Equipment storefront on US 77.")}
+    {fig("hayes-equipment-showroom-bad-boy-mowers-honda-snapper", 800, 600, "Hayes Equipment showroom lined with Bad Boy zero turn mowers, a Honda generator banner and Snapper sign", "The showroom, back when it was full.")}
+    {fig("hayes-equipment-showroom-honda-generators-bad-boy-outlaw", 800, 600, "Bad Boy Outlaw mower beside Honda EU3000is and Yamaha EF2000iS generators in the Hayes Equipment showroom", "A Bad Boy Outlaw next to the Honda and Yamaha generator display.")}
+    {fig("hayes-equipment-unloading-bad-boy-mower-delivery", 800, 600, "Unloading a semi trailer of new Bad Boy mowers at Hayes Equipment in Ponca City", "Unloading another semi of new Bad Boys.")}
+    {fig("hayes-equipment-bad-boy-zt-elite-mowers-lot", 800, 600, "Row of Bad Boy ZT Elite zero turn mowers outside Hayes Equipment with the Bad Boy trailer behind", "A row of ZT Elites lined up out front.")}
+    {fig("hayes-equipment-showroom-bad-boy-mz-magnum-zero-turns", 800, 600, "Rows of Bad Boy MZ Magnum zero turn mowers inside the Hayes Equipment showroom", "MZ Magnums ready for spring.")}
+  </div>
   <p>Generators became a big part of who we were. Honda was always our anchor. We also sold Yamaha, plenty of MorPower portables, and some Winco, which were good generators even if they never sold in big numbers for us. For a couple of years we sold a lot of Kipor super quiet generators, until we started seeing quality issues we never had with Honda, so we stopped carrying them. And we sold home standby generators, enough to earn a 2003 Exemplary Sales Achievement Award for Guardian automatic home standby systems.</p>
 
   <h3>The awards shelf</h3>

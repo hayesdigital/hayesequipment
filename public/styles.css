@@ -145,3 +145,7 @@ section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px s
   .timeline li{grid-template-columns:78px 1fr}
 }
 .story-body h3{font-size:1.2rem;margin:32px 0 10px;clear:both}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 8px;clear:both}
+.gallery .fig{margin:0}
+.gallery .fig img{aspect-ratio:4/3;object-fit:cover}
+@media(max-width:700px){.gallery{grid-template-columns:1fr 1fr}}
