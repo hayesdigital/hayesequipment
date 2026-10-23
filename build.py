@@ -362,6 +362,7 @@ write("/about/", head(
   <h2>It started with an auctioneer and a Big Chief tablet</h2>
   {fig("john-b-hayes-auctioneer-ponca-city", 700, 875, "John B. Hayes, Ponca City auctioneer, in a Hayes cap and shirt with a cartoon auctioneer asking Do I hear five and a nickel", "My dad, John B. Hayes (1952 to 2017), doing what he loved.", "right")}
   <p>My dad, John B. Hayes, was an auctioneer. Our family ran sales out of a big metal building on the north edge of Ponca City, the John B. Hayes Sale Facility on US 77. If you grew up around here, there's a decent chance you bought something there on a Saturday.</p>
+  {fig("john-b-hayes-real-estate-auction-card-since-1981", 900, 486, "John B. Hayes Real Estate and Auction Inc. card, Putting Buyers and Sellers Together Since 1981, with a cartoon auctioneer asking Do I hear five and a nickel", "The auction company card. Putting buyers and sellers together since 1981.")}
   <p>I got pulled into the marketing side early. By the time I was 14 or 15, I was writing our auction ads by hand on a legal pad. Dad always called it a Big Chief tablet. I'd drop the pages off with Doris, a nice lady who ran a typing service out of her home. When I picked them up, they came back neatly typed. Just plain text, with a line that said "photo here" wherever I'd scribbled it.</p>
   <p>Then I'd drive those ads over to the Ponca City News and hand them through their drive-up window. We ran ads every week, in the papers and in the local shoppers too, like the Shop and Swap and the Nickel papers. When fax machines came along, the little papers around us in Tonkawa, Newkirk and Shidler got one before the Ponca City News did. So I kept making that drive.</p>
   <p>Looking back, that was my first marketing job. I just didn't know it yet.</p>
@@ -396,6 +397,7 @@ write("/about/", head(
     {fig("hayes-equipment-bad-boy-zt-elite-mowers-lot", 800, 600, "Row of Bad Boy ZT Elite zero turn mowers outside Hayes Equipment with the Bad Boy trailer behind", "A row of ZT Elites lined up out front.")}
     {fig("hayes-equipment-showroom-bad-boy-mz-magnum-zero-turns", 800, 600, "Rows of Bad Boy MZ Magnum zero turn mowers inside the Hayes Equipment showroom", "MZ Magnums ready for spring.")}
   </div>
+  {fig("hayes-equipment-shop-bulldog-asleep-on-mat", 675, 900, "Shop bulldog asleep in the sun on the Hayes Equipment floor mat next to a Bad Boy mower", "Not every employee pulled their weight. Our shop bulldog's favorite spot was the welcome mat.", "right narrow")}
   <p>Generators became a big part of who we were. Honda was always our anchor. We also sold Yamaha, plenty of MorPower portables, and some Winco, which were good generators even if they never sold in big numbers for us. For a couple of years we sold a lot of Kipor super quiet generators, until we started seeing quality issues we never had with Honda, so we stopped carrying them. And we sold home standby generators, enough to earn a 2003 Exemplary Sales Achievement Award for Guardian automatic home standby systems.</p>
 
   <h3>The awards shelf</h3>
