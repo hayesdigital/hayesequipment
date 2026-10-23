@@ -351,7 +351,7 @@ write("/about/", head(
 <main class="story">
 <section class="story-hero"><div class="container">
   <span class="eyebrow">Our story</span>
-  <h1>The Hayes Equipment Story: How Our Ponca City Family Business Started My Career in SEO</h1>
+  <h1>The Hayes Equipment Story: How Our Ponca City Family Business Started My Career in Digital Marketing</h1>
   <p class="byline">By Todd Hayes &middot; Ponca City, Oklahoma</p>
 </div></section>
 
