@@ -354,14 +354,15 @@ write("/about/", head(
 </div></section>
 
 <article class="container story-body">
-  <p class="lead">If an old link brought you here, welcome back. Maybe you were looking for a Honda EU2000i we sold twenty years ago, or a Snapper mower, or a Cookshack smoker. Those pages are gone now. Hayes Equipment closed its doors in the fall of 2023.</p>
-  <p>But I didn't want this site to just go dark. It's where my whole career started... so here's the story.</p>
+  <p class="lead">Fair warning: this page is pure nostalgia. You don't need to read a word of it to find a WSK-1 manual or ask about a part. That's all on the <a href="/">support page</a>.</p>
+  <p>But if you've got a few minutes and a cup of coffee, I'd be glad if you stuck around. Just for old time's sake.</p>
+  <p>Maybe an old link brought you here, looking for a Honda EU2000i we sold twenty years ago, or a Snapper mower, or a Cookshack smoker. If so, welcome back. Those pages are gone now. Hayes Equipment closed its doors in the fall of 2023. But I didn't want this site to just go dark. It's where my whole career started... so here's the story.</p>
 
   <aside class="timeline" aria-label="Hayes Equipment timeline"><h2>At a glance</h2><ol>{tl}</ol></aside>
 
   <h2>It started with an auctioneer and a Big Chief tablet</h2>
   {fig("john-b-hayes-auctioneer-ponca-city", 700, 875, "John B. Hayes, Ponca City auctioneer, in a Hayes cap and shirt with a cartoon auctioneer asking Do I hear five and a nickel", "My dad, John B. Hayes (1952 to 2017), doing what he loved.", "right")}
-  <p>My dad, John B. Hayes, was an auctioneer. Our family ran sales out of a big metal building on the north edge of Ponca City, the John B. Hayes Sale Facility on US 77. If you grew up around here, there's a decent chance you bought something there on a Saturday.</p>
+  <p>My dad, John B. Hayes, was an auctioneer. Our family ran sales out of a big metal building on the north edge of Ponca City, the John B. Hayes Sale Facility on US 77. If you grew up around here, there's a decent chance you bought something there on a Saturday. My younger brother, Scott, grew up to be a great auctioneer himself.</p>
   {fig("john-b-hayes-real-estate-auction-card-since-1981", 900, 486, "John B. Hayes Real Estate and Auction Inc. card, Putting Buyers and Sellers Together Since 1981, with a cartoon auctioneer asking Do I hear five and a nickel", "The auction company card. Putting buyers and sellers together since 1981.")}
   <p>I got pulled into the marketing side early. By the time I was 14 or 15, I was writing our auction ads by hand on a legal pad. Dad always called it a Big Chief tablet. I'd drop the pages off with Doris, a nice lady who ran a typing service out of her home. When I picked them up, they came back neatly typed. Just plain text, with a line that said "photo here" wherever I'd scribbled it.</p>
   <p>Then I'd drive those ads over to the Ponca City News and hand them through their drive-up window. We ran ads every week, in the papers and in the local shoppers too, like the Shop and Swap and the Nickel papers. When fax machines came along, the little papers around us in Tonkawa, Newkirk and Shidler got one before the Ponca City News did. So I kept making that drive.</p>
@@ -392,7 +393,7 @@ write("/about/", head(
   <p>Then came Y2K. In late 1999, I took call after call from customers worried their computer might blow up when the clock hit midnight on New Year's Eve. So I'd walk them through it. Set your date to 2000, or 2005, or 2010, and click OK. You could hear the hesitation in their voice. Probably a little wince as they clicked the mouse. And then... nothing. Their computer just kept ticking along like always.</p>
 
   <h2>Hayes Equipment: lawn mowers on weekdays, auctions on Saturdays</h2>
-  <p>Auctions kept us busiest on weekends, especially Saturdays. Getting ready for a sale was plenty of work during the week too, but with at least three of us there, we had time for something more. So in 1999, we picked up Snapper mowers as our first equipment line, and Hayes Equipment opened as our Monday through Friday retail store.</p>
+  <p>Auctions kept us busiest on weekends, especially Saturdays. Getting ready for a sale was plenty of work during the week too, but with at least three of us there, we had time for something more. So in 1999, we picked up Snapper mowers as our first equipment line, and Hayes Equipment opened as our Monday through Friday retail store. Later on, we opened a second Hayes Equipment location in Stillwater, Oklahoma, too.</p>
   <p>It grew from there. Over the years we sold Scag, Walker, Toro, Snapper, Everride, Dixie Chopper, and finally Bad Boy mowers and Bad Boy implements. We carried LS tractors and Twister mini dune buggies. We even sold Cookshack smokers, which are built right here in Ponca City.</p>
   <div class="gallery">
     {fig("hayes-equipment-storefront-ponca-city-bad-boy-outlaw", 800, 600, "Hayes Equipment storefront with red HAYES sign, company truck and a Bad Boy Outlaw zero turn mower", "The Hayes Equipment storefront on US 77.")}
@@ -402,7 +403,7 @@ write("/about/", head(
     {fig("hayes-equipment-bad-boy-zt-elite-mowers-lot", 800, 600, "Row of Bad Boy ZT Elite zero turn mowers outside Hayes Equipment with the Bad Boy trailer behind", "A row of ZT Elites lined up out front.")}
     {fig("hayes-equipment-showroom-bad-boy-mz-magnum-zero-turns", 800, 600, "Rows of Bad Boy MZ Magnum zero turn mowers inside the Hayes Equipment showroom", "MZ Magnums ready for spring.")}
   </div>
-  {fig("hayes-equipment-shop-bulldog-asleep-on-mat", 675, 900, "Shop bulldog asleep in the sun on the Hayes Equipment floor mat next to a Bad Boy mower", "Not every employee pulled their weight. Our shop bulldog's favorite spot was the welcome mat.", "right narrow")}
+  {fig("hayes-equipment-shop-bulldog-asleep-on-mat", 675, 900, "Buddy the English bulldog asleep in the sun on the Hayes Equipment floor mat next to a Bad Boy mower", "Buddy, my English bulldog, came to work with me every day. His favorite job was keeping the welcome mat warm.", "right narrow")}
   <p>Generators became a big part of who we were. Honda was always our anchor. We also sold Yamaha, plenty of MorPower portables, and some Winco, which were good generators even if they never sold in big numbers for us. For a couple of years we sold a lot of Kipor super quiet generators, until we started seeing quality issues we never had with Honda, so we stopped carrying them. And we sold home standby generators, enough to earn a 2003 Exemplary Sales Achievement Award for Guardian automatic home standby systems.</p>
 
   <h3>The awards shelf</h3>
